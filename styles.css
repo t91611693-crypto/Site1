@@ -1,0 +1,810 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* ================= ROOT VARIABLES ================= */
+:root {
+  --primary-color: #e5c641;
+  --text-dark: #000000;
+  --text-light: #737373;
+  --extra-light: #f4f6f6;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+/* ================= GLOBAL RESET ================= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ================= COMMON CLASSES ================= */
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  text-align: center; /* Added for backend header */
+}
+
+/* ================= BUTTON ================= */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--text-dark);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+  color: var(--text-dark);
+}
+
+/* ================= NAVBAR ================= */
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+}
+
+.nav__header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+
+.nav__logo a {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.nav__links {
+  position: absolute;
+  width: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  transform: translateY(-100%);
+  transition: 0.4s;
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+.nav__links a {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.nav__links a:hover {
+  color: var(--text-dark);
+}
+
+/* ================= BACKEND DATA LIST (NEW) ================= */
+/* This section handles the yellow background and white card from your screenshot */
+
+.backend__section {
+  background-color: var(--primary-color);
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.backend__container {
+  width: 100%;
+  max-width: 800px; /* ADJUST SIZE HERE: Increase this if you add more columns */
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.backend__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--extra-light);
+  gap: 1rem;
+}
+
+.backend__row:last-child {
+  border-bottom: none;
+}
+
+.backend__col {
+  flex: 1; /* This ensures Name, Email, and Password share space equally */
+  color: var(--text-dark);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.backend__header {
+  font-weight: 700;
+  color: var(--text-light);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+/* Make sure the login button doesn't stretch too much */
+.backend__row .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    flex: 0; 
+}
+
+/* ================= HEADER ================= */
+header {
+  padding-top: 6rem;
+  margin-bottom: 5rem;
+}
+
+.header__container {
+  display: grid;
+  background-color: var(--extra-light);
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.header__content {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.header__content h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 5rem;
+  margin-bottom: 1rem;
+}
+
+.header__content p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.header__image img {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* ================= ARRIVAL ================= */
+.arrival__grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.arrival__card {
+  max-width: 500px;
+  margin: auto;
+}
+
+.arrival__image {
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.arrival__image img {
+  transition: 0.3s;
+}
+
+.arrival__card:hover img {
+  transform: scale(1.1);
+}
+
+.arrival__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrival__content h4 {
+  font-size: 1.3rem;
+}
+
+.arrival__content a {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.arrival__content a:hover {
+  color: var(--primary-color);
+}
+
+/* ================= SALE ================= */
+.sale {
+  background-color: var(--primary-color);
+}
+
+.sale__container {
+  display: grid;
+  gap: 2rem;
+}
+
+.sale__image img {
+  max-width: 450px;
+  margin: auto;
+}
+
+.sale__content {
+  padding: 2rem 1rem;
+}
+
+.sale__content h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.sale__content p {
+  margin-bottom: 1rem;
+}
+
+/* ================= FAVOURITE ================= */
+.favourite__grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.favourite__card {
+  max-width: 500px;
+  margin: auto;
+}
+
+.favourite__image {
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.favourite__image img {
+  transition: 0.3s;
+}
+
+.favourite__card:hover img {
+  transform: scale(1.1);
+}
+
+.favourite__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ================= DOWNLOAD ================= */
+.download__container {
+  display: grid;
+  gap: 2rem;
+}
+
+.download__image img {
+  max-width: 450px;
+  margin: auto;
+}
+
+.download__content {
+  text-align: center;
+}
+
+.download__links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* ================= PROMO ================= */
+/* ================= PROMO UPDATES ================= */
+.promo {
+  background-color: var(--primary-color);
+  padding: 4rem 1rem;
+}
+
+.promo__container {
+  text-align: center;
+}
+
+.promo__container form {
+  /* INCREASED SIZE HERE: 400px was too small for 3 inputs */
+  max-width: 800px; 
+  margin: 0 auto 2rem auto; /* Added bottom margin to separate signup/login */
+  display: flex;
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.promo__container input {
+  flex: 1;
+  border: none;
+  padding: 1rem;
+  outline: none;
+  font-family: inherit;
+  border-right: 1px solid #eee; /* Adds a small divider between inputs */
+  min-width: 0; /* Prevents inputs from pushing the container wide */
+}
+
+.promo__container input:last-of-type {
+  border-right: none;
+}
+
+.promo__container button {
+  border-radius: 0;
+  padding: 0 2rem;
+  white-space: nowrap; /* Keeps "Signup" or "Login" on one line */
+}
+
+/* Adjusting the login form if it only has 2 inputs to look balanced */
+.login-row {
+  max-width: 600px !important; 
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background-color: var(--text-dark);
+  color: var(--white);
+}
+
+.footer__container {
+  display: grid;
+  gap: 3rem;
+}
+
+.footer__col p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.footer__links {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.footer__links a {
+  color: var(--text-light);
+}
+
+.footer__links a:hover {
+  color: var(--white);
+}
+
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__socials a {
+  background-color: var(--primary-color);
+  padding: 6px 10px;
+  color: var(--text-dark);
+}
+
+.footer__bar {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.footer-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.footer-buttons button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #f5c518;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.footer-buttons button:hover {
+  background-color: white;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (min-width: 768px) {
+  nav {
+    position: static;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav__menu__btn {
+    display: none;
+  }
+
+  .nav__links {
+    position: static;
+    flex-direction: row;
+    transform: none;
+    background: none;
+    padding: 0;
+  }
+
+  .nav__links a {
+    color: var(--text-dark);
+  }
+
+  .header__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .header__content {
+    text-align: left;
+  }
+
+  .arrival__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sale__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .favourite__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .download__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  /* ================= MODAL STYLES ================= */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8); /* Dark background overlay */
+  overflow-y: auto;
+}
+
+.modal__content {
+  background-color: var(--white);
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 1000px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+/* ================= COAT GRID ================= */
+.coat__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.coat__item {
+  text-align: center;
+  border: 1px solid var(--extra-light);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.coat__item img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover; /* Keeps images looking sharp and proportional */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.coat__item p {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+/* ================= COAT INTERFACE (MODAL) ================= */
+.coat-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark backdrop */
+  backdrop-filter: blur(5px);
+  overflow-y: auto;
+}
+
+.coat-modal-content {
+  background-color: var(--extra-light);
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 90%;
+  max-width: 1100px;
+  border-radius: 20px;
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 1rem;
+}
+
+.close-btn {
+  font-size: 3rem;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+/* ================= COAT GRID LAYOUT ================= */
+.coat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Auto-rows and columns */
+  gap: 2rem;
+}
+
+.coat-card {
+  background: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.coat-card:hover {
+  transform: translateY(-10px);
+}
+
+.coat-img-container {
+  height: 350px;
+  background-color: #ddd; /* Gray placeholder color */
+}
+
+.coat-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coat-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.coat-info h5 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+/* ================= LUXURY OVERLAY ================= */
+.luxury-overlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* Clean white background for a bougie feel */
+  overflow-y: auto;
+  animation: fadeIn 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(1.05); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.luxury-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 4rem;
+}
+
+.luxury-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.luxury-brand {
+  letter-spacing: 5px;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.luxury-close {
+  cursor: pointer;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  border-bottom: 1px solid black;
+}
+
+/* ================= TITLE BLOCK ================= */
+.luxury-title-block {
+  text-align: center;
+  padding: 6rem 0;
+}
+
+.luxury-title-block h1 {
+  font-family: serif; /* Essential for "bougie" look */
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.luxury-title-block p {
+  color: var(--text-light);
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* ================= THE GRID ================= */
+.luxury-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  padding-bottom: 8rem;
+}
+
+.luxury-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.image-wrapper {
+  position: relative;
+  height: 600px; /* Tall, editorial aspect ratio */
+  overflow: hidden;
+  background-color: #f9f9f9;
+  margin-bottom: 1.5rem;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.luxury-item:hover img {
+  transform: scale(1.08);
+}
+
+.image-hover-info {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0;
+  transition: 0.4s;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.7rem;
+}
+
+.luxury-item:hover .image-hover-info {
+  opacity: 1;
+}
+
+/* ================= ITEM META ================= */
+.item-meta {
+  text-align: left;
+}
+
+.category {
+  display: block;
+  font-size: 0.7rem;
+  color: #999;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.item-meta h3 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .luxury-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+  .luxury-content { padding: 1rem 2rem; }
+}
+
+@media (max-width: 768px) {
+  .luxury-grid { grid-template-columns: 1fr; }
+  .image-wrapper { height: 450px; }
+}
+}
+
