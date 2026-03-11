@@ -1,215 +1,204 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fashion</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fashion Store</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
-
-  <link rel="stylesheet" href="styles.css" />
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <nav>
-    <div class="nav__header">
-      <div class="nav__logo">
-        <a href="#">Fashion</a>
-      </div>
-      <div class="nav__menu__btn" id="menu__btn">
-        <i class="ri-menu-line"></i>
-      </div>
-    </div>
+<nav>
+<div class="nav__header">
+<div class="nav__logo">Fashion</div>
 
-    <ul class="nav__links" id="nav-links">
-      <li><a href="#catalogue">Catalogue</a></li>
-      <li><a href="#fashion">Fashion</a></li>
-      <li><a href="#favourite">Favourite</a></li>
-      <li><a href="#lifestyle">Lifestyle</a></li>
-      <button class="signup-btn" onclick="signup()">SIGNUP</button>
-    </ul>
-  </nav>
-
-  <header>
-    <div class="section__container header__container">
-
-      <div class="header__content">
-        <h1>
-          <span>Let's</span><br />
-          <span>Explore</span><br />
-          <span>Clothes</span>
-        </h1>
-        <p>Influence & Fashion</p>
-        <div class="header_btns">
-          <button class="btn">Shop</button>
-        </div>
-      </div>
-
-      <div class="header__image">
-        <img src="assets/shopping (1).webp" alt="Fashion Header">
-      </div>
-
-    </div>
-  </header>
-
-  <section class="banner">
-    <div class="banner__container">
-      <img src="assets/istockphoto-1307568521-612x612.jpg" alt="arrival">
-      <img src="assets/istockphoto-1922703877-612x612.jpg" alt="arrival">
-    </div>
-  </section>
-
-  <section class="section__container arrival__container" id="catalogue">
-    <h2 class="section__header">NEW ARRIVALS</h2>
-
-    <div class="arrival__card">
-  <div class="arrival__image">
-    <img src="assets/images.jpg" alt="Coats">
-  </div>
-  <div class="arrival__content">
-    <h4>Coats & Parks</h4>
-    <a href="javascript:void(0)" class="explore-link" onclick="openCoatInterface()">EXPLORE THE COLLECTION</a>
-  </div>
+<div class="nav__menu__btn" id="menu__btn">
+<i class="ri-menu-line"></i>
+</div>
 </div>
 
-<div id="coatInterface" class="luxury-overlay">
-  <div class="luxury-content">
-    <header class="luxury-header">
-      <div class="luxury-brand">FASHION / ATELIER</div>
-      <span class="luxury-close" onclick="closeCoatInterface()">CLOSE</span>
-    </header>
+<ul class="nav__links" id="nav-links">
+<li><a href="#catalogue">Catalogue</a></li>
+<li><a href="#">Fashion</a></li>
+<li><a href="#">Favourite</a></li>
+<li><a href="#">Lifestyle</a></li>
+<button class="signup-btn" onclick="signup()">SIGNUP</button>
+</ul>
+</nav>
 
-    <div class="luxury-title-block">
-      <h1>Outerwear Collection</h1>
-      <p>Hand-crafted pieces designed for the modern silhouette.</p>
-    </div>
-    
-    <div class="luxury-grid">
-      <div class="luxury-item">
-        <div class="image-wrapper">
-          <img src="coat-1.jpg" alt="Nocturnal Overcoat">
-          <div class="image-hover-info">View Piece</div>
-        </div>
-        <div class="item-meta">
-          <span class="category">AW '26</span>
-          <h3>Nocturnal Wool Overcoat</h3>
-          <p class="price">$1,250</p>
-        </div>
-      </div>
+<header>
+<div class="header__container">
 
-      <div class="luxury-item">
-        <div class="image-wrapper">
-          <img src="coat-2.jpg" alt="Alpine Parka">
-          <div class="image-hover-info">View Piece</div>
-        </div>
-        <div class="item-meta">
-          <span class="category">EDITION 04</span>
-          <h3>Technical Alpine Parka</h3>
-          <p class="price">$980</p>
-        </div>
-      </div>
+<div class="header__content">
+<h1>
+<span>Let's</span><br>
+<span>Explore</span><br>
+<span>Clothes</span>
+</h1>
 
-      <div class="luxury-item">
-        <div class="image-wrapper">
-          <img src="coat-3.jpg" alt="Midnight Trench">
-          <div class="image-hover-info">View Piece</div>
-        </div>
-        <div class="item-meta">
-          <span class="category">LIMITED</span>
-          <h3>Midnight Silk Trench</h3>
-          <p class="price">$2,100</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<p>Influence & Fashion</p>
+
+<button class="btn">Shop</button>
 </div>
 
-      <div class="arrival__card">
-        <div class="arrival__image">
-          <img src="assets/images.jpg" alt="arrival">
-        </div>
-        <div class="arrival__content">
-          <h4>Hoodies</h4>
-          <a href="#">Explore</a>
-          <i class="ri-arrow-right-line"></i>
-        </div>
-      </div>
+<div class="header__image">
+<img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd53">
+</div>
 
-      <div class="arrival__card">
-        <div class="arrival__image">
-          <img src="assets/istockphoto-1304435581-612x612.jpg" alt="arrival">
-        </div>
-        <div class="arrival__content">
-          <h4>T-Shirts</h4>
-          <a href="#">Explore</a>
-          <i class="ri-arrow-right-line"></i>
-        </div>
-      </div>
-    </div>
-  </section>
+</div>
+</header>
 
-  
 
-  <section class="promo">
-  <div class="section__container promo__container">
-    <h2 class="section__header">Join Shopping</h2>
-    
-    <form id="signupForm" class="promo__form">
-      <input type="text" id="signupName" placeholder="Name" required>
-      <input type="email" id="signupEmail" placeholder="Email" required>
-      <input type="password" id="signupPassword" placeholder="Password" required>
-      <button type="submit" class="btn">Signup</button>
-    </form>
+<section class="arrival__container" id="catalogue">
 
-    <form id="loginForm" class="promo__form login-row">
-      <input type="email" id="loginEmail" placeholder="Email" required>
-      <input type="password" id="loginPassword" placeholder="Password" required>
-      <button type="submit" class="btn">Login</button>
-    </form>
+<h2 class="section__header">NEW ARRIVALS</h2>
 
-    <p id="responseMessage"></p>
-  </div>
+<div class="arrival__grid">
+
+<div class="arrival__card">
+<img src="https://images.unsplash.com/photo-1548883354-94bcfe321cbb">
+<h4>Coats & Parks</h4>
+<a onclick="openCoatInterface()">EXPLORE COLLECTION</a>
+</div>
+
+<div class="arrival__card">
+<img src="https://images.unsplash.com/photo-1520975922203-bf5d7c37c16c">
+<h4>Hoodies</h4>
+<a onclick="openHoodieInterface()">EXPLORE COLLECTION</a>
+</div>
+
+<div class="arrival__card">
+<img src="https://images.unsplash.com/photo-1520974735194-3a97f3d7b6c1">
+<h4>T-Shirts</h4>
+<a onclick="openTshirtInterface()">EXPLORE COLLECTION</a>
+</div>
+
+</div>
 </section>
 
-     
 
-  <footer>
-    <div class="section__container footer__container">
-      <div class="footer__col">
-        <h3>Fashion</h3>
-        <p>Complete your style with us.</p>
-      </div>
-    </div>
+<div id="coatInterface" class="luxury-overlay">
+<div class="luxury-content">
 
-    <div class="footer-buttons">
-      <button onclick="downloadApple()">Download on Apple</button>
-      <button onclick="downloadGoogle()">Download on Google</button>
-      <button onclick="contactInfo()">Contact Info</button>
-      <button onclick="reviews()">Reviews</button>
-      <button onclick="support()">Support</button>
-      <button onclick="faq()">FAQ</button>
-      <button onclick="locationInfo()">Location</button>
-    </div>
+<header class="luxury-header">
+<h2>Outerwear Collection</h2>
+<span onclick="closeCoatInterface()">CLOSE</span>
+</header>
 
-    <div class="footer__bar">
-      © 2026 Fashion. All Rights Reserved.
-    </div>
-  </footer>
+<div class="luxury-grid">
 
-  <script>
-    fetch("http://localhost:5000/api/message")
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById("backend-message").innerText = data.message;
-      })
-      .catch(() => {
-        document.getElementById("backend-message").innerText = "Backend not connected";
-      });
-  </script>
+<div class="luxury-item">
+<img src="https://images.unsplash.com/photo-1539533113208-f6df8cc8b543">
+<h3>Nocturnal Overcoat</h3>
+<p>$1200</p>
+</div>
 
-  <script src="main.js"></script>
+<div class="luxury-item">
+<img src="https://images.unsplash.com/photo-1542060748-10c28b62716b">
+<h3>Alpine Parka</h3>
+<p>$980</p>
+</div>
+
+<div class="luxury-item">
+<img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
+<h3>Midnight Trench</h3>
+<p>$1500</p>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<div id="hoodieInterface" class="luxury-overlay">
+<div class="luxury-content">
+
+<header class="luxury-header">
+<h2>Hoodie Collection</h2>
+<span onclick="closeHoodieInterface()">CLOSE</span>
+</header>
+
+<div class="luxury-grid">
+
+<div class="luxury-item">
+<img src="https://images.unsplash.com/photo-1520975922203-bf5d7c37c16c">
+<h3>Street Hoodie</h3>
+<p>$120</p>
+</div>
+
+<div class="luxury-item">
+<img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
+<h3>Oversized Hoodie</h3>
+<p>$150</p>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<div id="tshirtInterface" class="luxury-overlay">
+<div class="luxury-content">
+
+<header class="luxury-header">
+<h2>T-Shirt Collection</h2>
+<span onclick="closeTshirtInterface()">CLOSE</span>
+</header>
+
+<div class="luxury-grid">
+
+<div class="luxury-item">
+<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
+<h3>White Tee</h3>
+<p>$40</p>
+</div>
+
+<div class="luxury-item">
+<img src="https://images.unsplash.com/photo-1520974735194-3a97f3d7b6c1">
+<h3>Black Minimal Tee</h3>
+<p>$50</p>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<section class="promo">
+<h2>Join Shopping</h2>
+
+<form>
+<input type="text" placeholder="Name">
+<input type="email" placeholder="Email">
+<input type="password" placeholder="Password">
+<button class="btn">Signup</button>
+</form>
+
+</section>
+
+
+<footer>
+<h3>Fashion</h3>
+<p>Complete your style with us.</p>
+
+<div class="footer-buttons">
+<button onclick="downloadApple()">Download Apple</button>
+<button onclick="downloadGoogle()">Download Google</button>
+<button onclick="contactInfo()">Contact</button>
+<button onclick="reviews()">Reviews</button>
+<button onclick="support()">Support</button>
+<button onclick="faq()">FAQ</button>
+<button onclick="locationInfo()">Location</button>
+</div>
+
+<p class="footer__bar">© 2026 Fashion</p>
+</footer>
+
+<script src="main.js"></script>
 
 </body>
 </html>
